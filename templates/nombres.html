@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario Nombre</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/compraestilos.css">
+</head>
+<body>
+<div class="container">
+    <h1>Nombres</h1>
+    <form action="/nombres" method="POST">
+        <label for="nom1">Nombre 1</label>
+        <input type="text" id="nom1" name="nom1" required>
+        <br>
+        <label for="nom2">Nombre 2</label>
+        <input type="text" id="nom2" name="nom2" required>
+        <br>
+        <label for="nom3">Nombre 3</label>
+        <input type="text" id="nom3" name="nom3" required>
+        <br>
+
+        <button type="submit">enviar</button>
+    </form>
+    {% if sdecuento %}
+    <div>
+
+        <p> Nombre del Cliente : {{nombre}} </p>
+        <p> Total sin descuentos : {{sdecuento}} </p>
+         <p> El descuento es de : {{descuento}} </p>
+         <p> Total a pagar es : {{tpagar}} </p>
+
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>

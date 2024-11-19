@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Notas</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/loginestilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Notas</h1>
+        <form action="/notas" method="POST">
+
+            <label for="n1">Nota 1: </label>
+            <input type="text" id="n1" name="n1" required>
+            <br>
+            <label for="n2">Nota 2: </label>
+            <input type="text" id="n2" name="n2" required>
+            <br>
+            <label for="n3">Nota 3: </label>
+            <input type="text" id="n3" name="n3" required>
+            <br>
+            <label for="asis">Asistencia (%): </label>
+            <input type="text" id="asis" name="asis" required>
+            <br>
+
+
+            <button type="submit">enviar</button>
+
+        </form>
+
+
+        {% if respuesta %}
+        <div class="resultado">
+            <p>Mensaje : {{ respuesta }}</p>
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>
